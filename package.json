@@ -1,11 +1,10 @@
 {
   "name": "hooks-usecallback-ok",
   "version": "1.0.0",
-  "description": "",
+  "description": "React hooks boilerplate.",
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
-    "axios": "0.20.0",
     "bootstrap": "4.5.2",
     "react": "16.13.1",
     "react-dom": "16.13.1",
