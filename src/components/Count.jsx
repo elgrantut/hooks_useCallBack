@@ -3,10 +3,10 @@ import React from 'react'
 function Count({ text, count }) {
   return (
     <div>
-      <h6 className="text-primary font-weight-bold my-3">
+      <h5 className="text-success font-weight-bold my-3">
         {text}: {count}
-      </h6>
+      </h5>
     </div>
   )
 }
-export default Count
+export default React.memo(Count)

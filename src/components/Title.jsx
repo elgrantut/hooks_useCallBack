@@ -1,11 +1,11 @@
 import React from 'react'
 
-function Title() {
+function Title({ title }) {
   return (
     <div>
-      <h1 className="text-primary">useCallback Hook</h1>
+      <h1 className="text-primary">{title}</h1>
     </div>
   )
 }
 
-export default Title
+export default React.memo(Title)

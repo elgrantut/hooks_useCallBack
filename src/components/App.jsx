@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useCallback, useState } from 'react'
 import Title from './Title'
 import Count from './Count'
 import Button from './Button'
@@ -8,17 +8,17 @@ export default function App() {
   const [age, setAge] = useState(25)
   const [salary, setSalary] = useState(50000)
 
-  const incrementAge = () => {
+  const incrementAge = useCallback(() => {
     setAge(age + 1)
-  }
+  }, [age])
 
-  const incrementSalary = () => {
+  const incrementSalary = useCallback(() => {
     setSalary(salary + 1000)
-  }
+  }, [salary])
 
   return (
     <div className="container m-5">
-      <Title />
+      <Title title="Use Callback Hook" />
       <Count text="Age" count={age} />
       <Button handleClick={incrementAge}> Increment Age</Button>
       <Count text="Salary" count={salary} />
